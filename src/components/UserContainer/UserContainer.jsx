@@ -1,4 +1,4 @@
-import { User } from "../User/User.styled";
+import { Card } from "../User/User";
 import { List, ContainerUsers } from "./UserContainer.styled";
 
 export const UserContainer = ({ users }) => {
@@ -6,7 +6,7 @@ export const UserContainer = ({ users }) => {
     <ContainerUsers>
       <List>
         {users.map(({ id, avatar, followers, tweets, user }) => (
-          <User
+          <Card
             key={id}
             avatar={avatar}
             followers={followers}

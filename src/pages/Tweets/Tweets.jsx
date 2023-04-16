@@ -15,6 +15,5 @@ export const Tweets = () => {
       }
     })();
   }, []);
-  console.log(users);
   return <>{<UserContainer users={users} />}</>;
 };
