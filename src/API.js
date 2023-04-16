@@ -11,3 +11,13 @@ export async function getUsers() {
     console.log(error.data);
   }
 }
+
+export async function plusFollower() {
+  const url = `${BASE_URL}/tweets`;
+  try {
+    const { data } = await axios.get(url);
+    return data;
+  } catch (error) {
+    console.log(error.data);
+  }
+}
