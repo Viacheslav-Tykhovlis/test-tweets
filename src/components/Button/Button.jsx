@@ -1,16 +1,24 @@
 import { Button, FollowedButton, TextBtnFollow } from "./Button.styled";
 
-export const BtnNotFollowed = () => {
+export const BtnNotFollowed = ({ makePlus }) => {
   return (
-    <Button>
+    <Button
+      onClick={() => {
+        makePlus();
+      }}
+    >
       <TextBtnFollow>Follow</TextBtnFollow>
     </Button>
   );
 };
 
-export const BtnFollowed = () => {
+export const BtnFollowed = ({ makeMinus }) => {
   return (
-    <FollowedButton>
+    <FollowedButton
+      onClick={() => {
+        makeMinus();
+      }}
+    >
       <TextBtnFollow>Following</TextBtnFollow>
     </FollowedButton>
   );

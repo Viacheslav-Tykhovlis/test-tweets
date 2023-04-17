@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/tweets" element={<Tweets />} />
+          <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
     </div>
