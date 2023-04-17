@@ -1,3 +1,9 @@
+.containerUser {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
 .list {
   position: relative;
   text-align: center;
@@ -7,6 +13,7 @@
   gap: 24px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -100,6 +107,21 @@
 }
 
 .button {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.imgStyle {
+  width: 880px;
+  height: 411px;
+  align-self: center;
+  margin-top: 30px;
+}
+
+.home {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }

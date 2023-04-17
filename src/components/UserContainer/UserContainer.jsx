@@ -1,7 +1,10 @@
-import { Card } from "../User/User";
+import { Card } from "../Card/Card";
+import { LoadMore } from "../LoadMore/LoadMore";
 import { List, ContainerUsers } from "./UserContainer.styled";
 
-export const UserContainer = ({ users }) => {
+export const UserContainer = ({ users, loadMore }) => {
+  // console.log(users);
+
   return (
     <ContainerUsers>
       <List>
@@ -12,9 +15,11 @@ export const UserContainer = ({ users }) => {
             followers={followers}
             user={user}
             tweets={tweets}
+            id={id}
           />
         ))}
       </List>
+      <LoadMore loadMore={loadMore} />
     </ContainerUsers>
   );
 };
