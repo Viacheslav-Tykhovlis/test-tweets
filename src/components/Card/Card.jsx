@@ -16,17 +16,20 @@ import Rectangle from "../../img/Rectangle.png";
 import Ellips from "../../img/AvatarEllipse.png";
 import { plusFollower, minusFollower } from "../../API";
 
-export const Card = ({ id, avatar, followers, tweets }) => {
+export const Card = ({ id, avatar, followers, tweets, isFollowed }) => {
   const [follower, setFollower] = useState(followers);
+  const [wasFollow, setWasFollow] = useState(isFollowed);
 
   const plus = async () => {
     const result = await plusFollower(id, follower);
     setFollower(result.followers);
+    setWasFollow((prevState) => !prevState);
   };
 
   const minus = async () => {
     const result = await minusFollower(id, follower);
     setFollower(result.followers);
+    setWasFollow((prevState) => !prevState);
   };
 
   return (
@@ -40,10 +43,10 @@ export const Card = ({ id, avatar, followers, tweets }) => {
       <Followers>
         {(follower / 1000).toFixed(3).replace(".", ",")} followers
       </Followers>
-      {follower === 100500 ? (
-        <BtnNotFollowed makePlus={plus} />
-      ) : (
+      {wasFollow ? (
         <BtnFollowed makeMinus={minus} />
+      ) : (
+        <BtnNotFollowed makePlus={plus} />
       )}
     </User>
   );
