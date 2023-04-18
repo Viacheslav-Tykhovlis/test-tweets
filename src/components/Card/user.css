@@ -14,6 +14,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+  background-color: #419b09;
 }
 
 .card {
@@ -124,4 +125,10 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.back {
+  margin-bottom: 20px;
+  align-self: self-start;
+  border-radius: 20px;
 }
